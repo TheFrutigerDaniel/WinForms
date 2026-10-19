@@ -39,14 +39,17 @@
             // labelTime
             // 
             this.labelTime.AutoSize = true;
+            this.labelTime.BackColor = System.Drawing.SystemColors.Highlight;
             this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelTime.Location = new System.Drawing.Point(56, 47);
+            this.labelTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelTime.Location = new System.Drawing.Point(71, 44);
             this.labelTime.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(379, 69);
             this.labelTime.TabIndex = 0;
             this.labelTime.Text = "Current Time";
             this.labelTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelTime.Click += new System.EventHandler(this.labelTime_Click);
             // 
             // timer
             // 
@@ -57,7 +60,7 @@
             // 
             this.cdShowDate.AutoSize = true;
             this.cdShowDate.Location = new System.Drawing.Point(30, 295);
-            this.cdShowDate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cdShowDate.Margin = new System.Windows.Forms.Padding(6);
             this.cdShowDate.Name = "cdShowDate";
             this.cdShowDate.Size = new System.Drawing.Size(170, 36);
             this.cdShowDate.TabIndex = 1;
@@ -96,10 +99,10 @@
             this.Controls.Add(this.labelTime);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MainForm";
             this.Text = "Clock P418";
-            this.TransparencyKey = System.Drawing.Color.Black;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

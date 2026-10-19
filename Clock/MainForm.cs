@@ -37,7 +37,23 @@ namespace Clock
             cdShowDate.Visible = false;
             btnHideControls.Visible = false;
             this.ShowInTaskbar = false;
+            this.TransparencyKey = this.BackColor;
+            this.FormBorderStyle = FormBorderStyle.None;
+        }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTime_Click(object sender, EventArgs e)
+        {
+            cbShowWeekDay.Visible = true;
+            cdShowDate.Visible = true;
+            btnHideControls.Visible = true;
+            this.ShowInTaskbar = true;
+            this.TransparencyKey = Color.Empty; 
+            this.FormBorderStyle = FormBorderStyle.Sizable;
         }
     }
 }
