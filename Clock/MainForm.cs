@@ -15,6 +15,9 @@ namespace Clock
         public MainForm()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.Manual;
+            var screenArea = Screen.FromControl(this).WorkingArea;
+            this.Location = new Point(screenArea.Right - this.Width, screenArea.Top);
         }
 
 
@@ -43,7 +46,7 @@ namespace Clock
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+        
         }
 
         private void labelTime_Click(object sender, EventArgs e)
