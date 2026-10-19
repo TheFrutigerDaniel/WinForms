@@ -99,6 +99,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "MainForm";
             this.Text = "Clock P418";
+            this.TransparencyKey = System.Drawing.Color.Black;
             this.ResumeLayout(false);
             this.PerformLayout();
 

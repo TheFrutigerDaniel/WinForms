@@ -33,6 +33,10 @@ namespace Clock
 
         private void btnHideControls_Click(object sender, EventArgs e)
         {
+            cbShowWeekDay.Visible = false;
+            cdShowDate.Visible = false;
+            btnHideControls.Visible = false;
+            this.ShowInTaskbar = false;
 
         }
     }
