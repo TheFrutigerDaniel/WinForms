@@ -49,14 +49,51 @@ namespace Clock
         
         }
 
-        private void labelTime_Click(object sender, EventArgs e)
+        private void labelTime_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                clockontext.Show(labelTime, e.Location);
+            }
+        }
+
+        private void showDateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cdShowDate.Checked = showDateToolStripMenuItem.Checked;
+        }
+
+        private void showDayOfTheWeekToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cbShowWeekDay.Checked = showDayOfTheWeekToolStripMenuItem.Checked;
+        }
+        
+        private void showDayOfTheWeekToolStripMenuItem_Checked(object sender, EventArgs e)
+        {
+            labelTime.Text += "\n" + DateTime.Now.ToString("dddd");
+        }
+
+
+        private void hideControlsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AllowTransparency = true;
+            cbShowWeekDay.Visible = false;
+            cdShowDate.Visible = false;
+            btnHideControls.Visible = false;
+            this.ShowInTaskbar = false;
+            this.TransparencyKey = this.BackColor;
+            this.FormBorderStyle = FormBorderStyle.None;
+        }
+
+        private void showControlsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             cbShowWeekDay.Visible = true;
             cdShowDate.Visible = true;
             btnHideControls.Visible = true;
             this.ShowInTaskbar = true;
-            this.TransparencyKey = Color.Empty; 
+            AllowTransparency = false;
             this.FormBorderStyle = FormBorderStyle.Sizable;
         }
+
+        
     }
 }

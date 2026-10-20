@@ -34,22 +34,27 @@
             this.cdShowDate = new System.Windows.Forms.CheckBox();
             this.cbShowWeekDay = new System.Windows.Forms.CheckBox();
             this.btnHideControls = new System.Windows.Forms.Button();
+            this.clockontext = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showDateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showDayOfTheWeekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hideControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clockontext.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTime
             // 
-            this.labelTime.AutoSize = true;
             this.labelTime.BackColor = System.Drawing.SystemColors.Highlight;
             this.labelTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelTime.Location = new System.Drawing.Point(134, 85);
+            this.labelTime.Location = new System.Drawing.Point(0, 0);
             this.labelTime.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(379, 69);
+            this.labelTime.Size = new System.Drawing.Size(502, 250);
             this.labelTime.TabIndex = 0;
             this.labelTime.Text = "Current Time";
-            this.labelTime.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelTime.Click += new System.EventHandler(this.labelTime_Click);
+            this.labelTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTime.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labelTime_MouseClick);
             // 
             // timer
             // 
@@ -88,11 +93,52 @@
             this.btnHideControls.UseVisualStyleBackColor = true;
             this.btnHideControls.Click += new System.EventHandler(this.btnHideControls_Click);
             // 
+            // clockontext
+            // 
+            this.clockontext.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.clockontext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showDateToolStripMenuItem,
+            this.showDayOfTheWeekToolStripMenuItem,
+            this.hideControlsToolStripMenuItem,
+            this.showControlsToolStripMenuItem});
+            this.clockontext.Name = "clockontext";
+            this.clockontext.Size = new System.Drawing.Size(224, 100);
+            // 
+            // showDateToolStripMenuItem
+            // 
+            this.showDateToolStripMenuItem.CheckOnClick = true;
+            this.showDateToolStripMenuItem.Name = "showDateToolStripMenuItem";
+            this.showDateToolStripMenuItem.Size = new System.Drawing.Size(223, 24);
+            this.showDateToolStripMenuItem.Text = "Show date";
+            this.showDateToolStripMenuItem.Click += new System.EventHandler(this.showDateToolStripMenuItem_Click);
+            // 
+            // showDayOfTheWeekToolStripMenuItem
+            // 
+            this.showDayOfTheWeekToolStripMenuItem.CheckOnClick = true;
+            this.showDayOfTheWeekToolStripMenuItem.Name = "showDayOfTheWeekToolStripMenuItem";
+            this.showDayOfTheWeekToolStripMenuItem.Size = new System.Drawing.Size(223, 24);
+            this.showDayOfTheWeekToolStripMenuItem.Text = "Show day of the week";
+            this.showDayOfTheWeekToolStripMenuItem.Click += new System.EventHandler(this.showDayOfTheWeekToolStripMenuItem_Click);
+            // 
+            // hideControlsToolStripMenuItem
+            // 
+            this.hideControlsToolStripMenuItem.Name = "hideControlsToolStripMenuItem";
+            this.hideControlsToolStripMenuItem.Size = new System.Drawing.Size(223, 24);
+            this.hideControlsToolStripMenuItem.Text = "Hide controls";
+            this.hideControlsToolStripMenuItem.Click += new System.EventHandler(this.hideControlsToolStripMenuItem_Click);
+            // 
+            // showControlsToolStripMenuItem
+            // 
+            this.showControlsToolStripMenuItem.Name = "showControlsToolStripMenuItem";
+            this.showControlsToolStripMenuItem.Size = new System.Drawing.Size(223, 24);
+            this.showControlsToolStripMenuItem.Text = "Show controls";
+            this.showControlsToolStripMenuItem.Click += new System.EventHandler(this.showControlsToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 599);
+            this.ClientSize = new System.Drawing.Size(502, 593);
             this.Controls.Add(this.btnHideControls);
             this.Controls.Add(this.cbShowWeekDay);
             this.Controls.Add(this.cdShowDate);
@@ -104,6 +150,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Clock P418";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.clockontext.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,6 +163,11 @@
         private System.Windows.Forms.CheckBox cdShowDate;
         private System.Windows.Forms.CheckBox cbShowWeekDay;
         private System.Windows.Forms.Button btnHideControls;
+        private System.Windows.Forms.ContextMenuStrip clockontext;
+        private System.Windows.Forms.ToolStripMenuItem showDateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showDayOfTheWeekToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hideControlsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showControlsToolStripMenuItem;
     }
 }
 
