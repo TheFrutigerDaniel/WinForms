@@ -39,6 +39,8 @@
             this.showDayOfTheWeekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hideControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showControlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CloseButton = new System.Windows.Forms.Button();
+            this.closeProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clockontext.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,9 +102,10 @@
             this.showDateToolStripMenuItem,
             this.showDayOfTheWeekToolStripMenuItem,
             this.hideControlsToolStripMenuItem,
-            this.showControlsToolStripMenuItem});
+            this.showControlsToolStripMenuItem,
+            this.closeProgramToolStripMenuItem});
             this.clockontext.Name = "clockontext";
-            this.clockontext.Size = new System.Drawing.Size(224, 100);
+            this.clockontext.Size = new System.Drawing.Size(224, 152);
             // 
             // showDateToolStripMenuItem
             // 
@@ -134,11 +137,30 @@
             this.showControlsToolStripMenuItem.Text = "Show controls";
             this.showControlsToolStripMenuItem.Click += new System.EventHandler(this.showControlsToolStripMenuItem_Click);
             // 
+            // CloseButton
+            // 
+            this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CloseButton.Location = new System.Drawing.Point(404, 394);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 5;
+            this.CloseButton.Text = "CLOSE";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // closeProgramToolStripMenuItem
+            // 
+            this.closeProgramToolStripMenuItem.Name = "closeProgramToolStripMenuItem";
+            this.closeProgramToolStripMenuItem.Size = new System.Drawing.Size(223, 24);
+            this.closeProgramToolStripMenuItem.Text = "Close program";
+            this.closeProgramToolStripMenuItem.Click += new System.EventHandler(this.closeProgramToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 593);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.btnHideControls);
             this.Controls.Add(this.cbShowWeekDay);
             this.Controls.Add(this.cdShowDate);
@@ -168,6 +190,8 @@
         private System.Windows.Forms.ToolStripMenuItem showDayOfTheWeekToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hideControlsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showControlsToolStripMenuItem;
+        private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.ToolStripMenuItem closeProgramToolStripMenuItem;
     }
 }
 
